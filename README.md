@@ -6,3 +6,4 @@ Inhoud:
 ## link extra info (wiki)
 ## Plaatjes
 ## Specs // install?
+## Licens
