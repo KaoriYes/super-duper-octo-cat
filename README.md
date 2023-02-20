@@ -1,5 +1,8 @@
 # super-duper-octo-cat
-Inhoud: 
+Hi there,
+Dit is de Readme voor de Super-Duper-Octo-Cat//Musiq Finder. 
+Musiq Finder is een applicatie die het makkelijk maakt om nieuwe muziekalbums te vinden voor gebruikers die opzoek zijn naar nieuwe muziek.
+
 ## BUGS
 ## Snelle Handleiding
 ## Table of Contents

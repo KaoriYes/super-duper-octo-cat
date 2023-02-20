@@ -1,11 +1,12 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const chalk = require("chalk");
 
+// console.log(chalk.blue('Hello world!'));
+// app.get("/", onHome).listen(420, console.log((chalk.backgroundColorNames("yuh"))));
+// function onHome(req, rest){
+//   rest.send("Jhaallo")
+// }
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
 })
