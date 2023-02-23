@@ -4,3 +4,4 @@ uploauds/
 /.env
 eslintrc.js
 dbconnection.txt
+.DS_Store
