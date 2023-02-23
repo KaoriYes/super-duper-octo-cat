@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const chalk = require("chalk");
-
 const bodyParser = require('body-parser');
 
 const host = "localhost";
