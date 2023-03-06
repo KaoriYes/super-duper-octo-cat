@@ -1,0 +1,18 @@
+:root {
+    --font-michroma: 'Michroma', sans-serif;
+    --font-courier: 'Courier', monospace;
+    --font-roboto: 'Roboto', sans-serif;
+}
+
+
+html {
+    font-size: 1em;
+    scroll-behavior: smooth;
+    scroll-snap-type: both proximity;
+}
+
+body {
+    background-color: #1B1B1B;
+    color: white;
+    margin: 0;
+}
