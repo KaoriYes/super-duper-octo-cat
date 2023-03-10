@@ -3,14 +3,14 @@ const app = express();
 const chalk = require('chalk');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-console.log(process.env);
+
 
 const host = 'localhost';
 const port = 420;
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const password = process.env.DB_Key;
+const dburi = process.env.DB_uri;
 
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
@@ -18,23 +18,17 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public/'));
 
 
-// app.get('/about', (req, res) => {
-//   res.send('About Page');
-// });
-// app.get('/contact', (req, res) => {
-//   res.send('Contact Page');
-// });
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   res.locals.title = 'Homepage';
+  res.locals.body = '';
   res.render('index.ejs');
 });
 
-app.get('/form', (req, res) => {
-  res.locals.title = 'Form';
-  res.render('form.ejs');
+app.get('/register', (req, res) => {
+  res.locals.title = 'Register';
+  res.render('register.ejs');
 });
 
 app.post('/submit', (req, res) => {
@@ -52,7 +46,7 @@ app.use(function(req, res){
 
 async function connectDB(){ 
   console.log('connecting') 
-  const uri = 'mongodb+srv://quintenkok:' + password + '@cluster0.bpcqphd.mongodb.net/?retryWrites=true&w=majority'
+  const uri = dburi;
   const client = new MongoClient(uri, {
    useNewUrlParser: true, useUnifiedTopology: true,
  });
