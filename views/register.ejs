@@ -1,7 +1,29 @@
 <%- include('header.ejs') %>
-<h1>Homepage</h1>
+<h1>Registreer jou account</h1>
+<h2><%= subtitle %></h2>
+<div id="map"></div>
+<form action="/submit" method="POST" id="form">
+    <input type="text" id="name" name="name" placeholder="Gebruikersnaam">
+    <input type="email" id="email" name="email" placeholder="Email">
+    <input type="password" id="password" name="password" placeholder="Wachtwoord">
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Herhaal Wachtwoord">
+    <label for="dob">Geboortedatum:</label>
+    <input type="date" id="dob" name="dob">
+    <label for="gender">Geslacht:</label>
+    <select id="gender" name="gender">
+        <option value="male">Man</option>
+        <option value="female">Vrouw</option>
+        <option value="other">Overig</option>
+    </select>
+
+    <button type="button" onclick="getLocation()">Get Location</button>
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
 
 
+    <input type="submit" value="Register">
+</form>
+<script src="/scripts/register.js"></script>
 
 
 <%- include ('footer.ejs') %>

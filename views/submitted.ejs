@@ -1,0 +1,24 @@
+<%- include('header.ejs') %>
+<h1>Register submitted</h1>
+<h2>
+    Welkom <%= name %>
+</h2>
+<section>
+    <h3>Controleer jou gegevens:</h3>
+    <ul>
+        <li>Email: <%= email %></li>
+        <li>Geboortedatum: <%= dob %></li>
+        <li>Geslacht: <%= gender %></li>
+    </ul>
+</section>
+
+<section>
+    <h3>Toch liever niet?</h3>
+    <form method="POST" action="/deleteuser">
+        <input type="hidden" name="kaas" value="<%=name%>">
+        <button type="submit">Verwijder account</button>
+    </form>
+</section>
+
+
+<%- include ('footer.ejs') %>

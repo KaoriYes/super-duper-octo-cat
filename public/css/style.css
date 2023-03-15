@@ -1,6 +1,6 @@
 :root {
     --font-michroma: 'Michroma', sans-serif;
-    --font-courier: 'Courier', monospace;
+    --font-courier: 'Courier New', monospace;
     --font-roboto: 'Roboto', sans-serif;
 }
 
@@ -9,10 +9,40 @@ html {
     font-size: 1em;
     scroll-behavior: smooth;
     scroll-snap-type: both proximity;
+    font-family: var(--font-courier);
 }
 
 body {
     background-color: #1B1B1B;
     color: white;
     margin: 0;
+}
+
+h1 {
+    font-family: var(--font-michroma);
+}
+
+a {
+    color: white;
+
+    font-size: 1.5em;
+    background-color: #2b2b2b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 1em;
+}
+
+form input {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.displaynone {
+    display: none;
 }

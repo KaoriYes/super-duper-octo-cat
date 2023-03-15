@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KaoriYes/super-duper-octo-cat#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "camelcase": "^7.0.1",
     "chalk": "^4.1.2",
     "dotenv": "^16.0.3",
@@ -30,9 +31,10 @@
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.20",
     "pug": "^3.0.2",
-    "slug": "^8.2.2"
+    "slug": "^8.2.2",
+    "xss": "^1.0.14"
   },
   "devDependencies": {
-    "eslint": "^8.34.0"
+    "eslint": "^8.36.0"
   }
 }
