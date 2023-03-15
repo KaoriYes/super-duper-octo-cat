@@ -20,31 +20,31 @@ Om de applicatie te kunnen gebruiken moet je eerst een aantal dingen installeren
 Git is een versiebeheersysteem. Dit houdt in dat je met git een soort van map kan maken waarin je bestanden kan opslaan. Deze bestanden kan je vervolgens aanpassen en opslaan. Dit is handig omdat je dan altijd een soort van back-up hebt van je bestanden. Daarnaast kan je met git ook samenwerken met andere mensen aan een project. Dit is handig omdat je dan met meerdere mensen tegelijk aan een project kan werken. Dit is vooral handig als je bijvoorbeeld een website maakt en je wilt dat meerdere mensen aan de website werken. 
 
 Om Git te installeren type je in je terminal het volgende commando:
-```Git install```
-Of ```Git --version``` om te kijken of je Git al hebt geïnstalleerd.
+<code>Git install</code>
+Of <code>Git --version</code> om te kijken of je Git al hebt geïnstalleerd.
 
 #### Node.js
 Node.js is een runtime omgeving voor JavaScript. Dit houdt in dat je met Node.js JavaScript kan gebruiken om een server te maken. Dit is handig omdat je met Node.js een server kan maken die je kan gebruiken om bijvoorbeeld een website te hosten.
 
 Om Node.js te installeren type je in je terminal het volgende commando:
-```Node install```
-Of ```Node --version``` om te kijken of je Node.js al hebt geïnstalleerd.
+<code>Node install</code>
+Of <code>Node --version</code> om te kijken of je Node.js al hebt geïnstalleerd.
 
 #### NPM
 Voor het installeren van packages die je nodig hebt voor je project is NPM handig. NPM is een package manager. Dit houdt in dat je met NPM packages kan installeren die je nodig hebt voor je project. Dit is handig omdat je dan niet alle packages zelf hoeft te downloaden en te installeren. Daarnaast is het ook handig omdat je met NPM packages kan updaten en verwijderen.
 
 Om NPM te installeren type je in je terminal het volgende commando:
-```NPM install```
-Of ```NPM --version``` om te kijken of je NPM al hebt geïnstalleerd.
+<code> NPM install</code>
+Of <code> NPM --version</code> om te kijken of je NPM al hebt geïnstalleerd.
 
 ## Installatie
 ### Installatie
 Om de applicatie te installeren moet je eerst een aantal dingen doen.
  Dit zijn: 
  * Clone de repository:
-    ``` git clone https://github.com/KaoriYes/super-duper-octo-cat.git ```
+    <code>git clone https://github.com/KaoriYes/super-duper-octo-cat.git </code>
  
- * npm start in de terminal
+ * <code>npm start </code> in de terminal
     * Ga naar localhost:420 in je browser om de applicatie te gebruiken.
 
 
