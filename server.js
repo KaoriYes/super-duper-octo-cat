@@ -1,19 +1,15 @@
 const express = require('express');
 const app = express();
-const chalk = require('chalk');
 const bodyParser = require('body-parser');
-const xss = require('xss');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 require('dotenv').config();
 
 
-const host = 'localhost';
 const port = 420;
 
 const {
-  MongoClient,
-  ServerApiVersion
+  MongoClient
 } = require('mongodb');
 
 const dburi = process.env.DB_uri;
@@ -27,6 +23,26 @@ app.use(express.static(__dirname + '/public/'));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+
+async function connectDB() {
+  console.log('connecting');
+  const uri = dburi;
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  try {
+    console.log('awaiting connection');
+    await client.connect();
+    console.log('connected!');
+    db = client.db('Userdb');
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
 
 app.get('/', (req, res) => {
   res.locals.title = 'Homepage';
@@ -76,11 +92,11 @@ app.post('/submit', async (req, res) => {
       gender: gender,
       latitude: latitude,
       longtitude: longitude
-    }
+    };
     db.collection('Users').insertOne(userdata, function (err, collection) {
       if (err) throw err;
       console.log('Record inserted Successfully');
-    })
+    });
 
   }
 });
@@ -117,29 +133,11 @@ app.use(function (req, res) {
 });
 
 
-async function connectDB() {
-  console.log('connecting')
-  const uri = dburi;
-  const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  try {
-    console.log('awaiting connection');
-    await client.connect();
-    console.log('connected!');
-    db = client.db('Userdb');
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-}
 
 //server configurations
 app.listen(port, async () => {
-  let databaseConnection = await connectDB();
+  await connectDB();
   let theData = await db.collection('Users').find({
-    age: 30
   }).toArray();
   console.log(theData);
 });

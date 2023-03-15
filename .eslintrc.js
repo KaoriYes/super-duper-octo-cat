@@ -1,8 +1,8 @@
-{
+module.exports = {
     "env": {
+        "browser": true,
         "commonjs": true,
-        "es2021": true,
-        "node": true
+        "es2021": true
     },
     "extends": "eslint:recommended",
     "overrides": [
@@ -11,6 +11,6 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        
+        "semi": 1
     }
-}
+};
