@@ -5,10 +5,14 @@ Musiq Finder is een applicatie die het makkelijk maakt om nieuwe muziekalbums te
 
 ## BUGS
 ## Snelle Handleiding
+Je kan mijn webapp om te registreren gebruiken door op de homepagina op registreren te drukken. Vervolgens kan je daar je account aanmaken en eventueel locatie toevoegen
+Daarnaast is het mogelijk om ue account te verwijderen.
+
 ## Table of Contents
 ## link extra info (wiki)
 ## Plaatjes
 ## Specs // install?
+
 ## Licens
 
 <!-- ## Front-end Development
